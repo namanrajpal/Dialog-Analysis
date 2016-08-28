@@ -20,7 +20,7 @@ public class Main {
         int k=0;
 
         try {
-            filein = new Scanner(new File("input.txt"));
+            filein = new Scanner(new File("test.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -94,7 +94,11 @@ public class Main {
 
 
 
-        //part 3 here
+        // 3- How many words per turn on average did each interlocutor make?
+        int[] person3 = new int[2];
+        person3[1] = person1[1]/person[1];
+        person3[0] = person1[0]/person[0];
+        System.out.println("\n\nAnswer 3 \nPerson A : "+person3[0]+ "\nPerson B : "+person3[1]);
 
 
     }
