@@ -17,7 +17,7 @@ public class Main {
         //System.out.println("Starting");
         Scanner filein = null;
         try {
-            filein = new Scanner(new File("C:\\Users\\Naman Rajpal\\Desktop\\Homeowrk1\\input.txt"));
+            filein = new Scanner(new File("input.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -29,7 +29,8 @@ public class Main {
             line = filein.nextLine();
             text.add(line);
         }
-        System.out.println(text.size());
+        
+
         //printing text, looping on i
         int i=0;
         do

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4969ae37-9e9a-496e-bac8-d95e08b5be0a" name="Default" comment="" />
+    <list default="true" id="4969ae37-9e9a-496e-bac8-d95e08b5be0a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/input.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/nmn/Main.java" afterPath="$PROJECT_DIR$/src/com/nmn/Main.java" />
+    </list>
     <ignored path="DialogSystem_hw1.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,8 +29,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/nmn/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+            <state relative-caret-position="556">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#374#382#0" expanded="true" />
@@ -162,12 +165,12 @@
       <updated>1472152250924</updated>
       <workItem from="1472152258760" duration="212000" />
       <workItem from="1472152940204" duration="1172000" />
-      <workItem from="1472350816287" duration="3088000" />
+      <workItem from="1472350816287" duration="3873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4472000" />
+    <option name="totallyTimeSpent" value="5257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2092" extended-state="6" />
@@ -231,8 +234,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nmn/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state relative-caret-position="556">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#374#382#0" expanded="true" />
