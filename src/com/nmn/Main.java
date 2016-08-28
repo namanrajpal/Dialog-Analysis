@@ -95,6 +95,45 @@ public class Main {
 
 
         //part 3 here
+        
+        //Part 4: Average length of word each interlocutor make.
+        int[] person2 = new int[2];
+        i = 0;
+        int flag = 0;
+        do
+        {
+            flag = 0;
+            String currentText = text.get(i);
+            String currentDialog = new String();
+            char c;
+            for(int j = 0; j < currentText.length(); j++){
+                c = currentText.charAt(j);
+                if(c == 'A'){
+                    currentDialog = currentText.split("A: ")[1];
+                    break;
+                }
+                else if(c == 'B'){
+                    currentDialog = currentText.split("B: ")[1];
+                    flag = 1;
+                    break;
+                }
+            }
+            if(currentDialog.contains("((")) {
+                currentDialog = currentDialog.replaceAll("\\(\\((.*)\\)\\)", "");
+            }
+            currentDialog = currentDialog.replace(" ", "");
+            currentDialog = currentDialog.replace("'", "");
+            currentDialog = currentDialog.replace("_", "");
+            currentDialog = currentDialog.replace(".", "");
+            currentDialog = currentDialog.replace("-", "");
+            System.out.println(currentDialog + " " + currentDialog.length());
+            if(flag == 0)
+                person2[0] += currentDialog.length();
+            else if(flag == 1)
+                person2[1] += currentDialog.length();
+            i+=2;
+        }while(text.size()>i);
+        System.out.println("Answer 4: " + "Person A: " + person2[0]/person1[0] + "\nPerson B: " + person2[1]/person1[1]);
 
 
     }
