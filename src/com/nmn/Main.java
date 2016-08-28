@@ -16,7 +16,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //ArrayList<ArrayList<String>> text = new ArrayList<ArrayList<String>>();
         int i=0;
         int k=0;
 
@@ -26,7 +25,6 @@ public class Main {
             e.printStackTrace();
         }
 
-
         //adding text to main Array 'text'
         while(filein.hasNextLine())
         {
@@ -34,54 +32,69 @@ public class Main {
             text.add(line);
         }
 
-
         //printtext();
+
+        //Part 1: Count number of dialogue turns of each interlocutor
+        int[] person = new int[2];
+        person[0] = 0;
+        person[1] = 0;
+        do
+        {
+            String currentDialog = text.get(i);
+            char c;
+            for(int j = 0; j < currentDialog.length(); j++){
+                c = currentDialog.charAt(j);
+                if(c == 'A'){
+                    person[0]++;
+                    break;
+                }
+                else if(c == 'B'){
+                    person[1]++;
+                    break;
+                }
+            }
+            i+=2;
+        }while(text.size()>i);
+        System.out.println("\n" +
+                "\n" +
+                "Answer 1 \nPerson A: " + person[0] + "\nPerson B: " + person[1]);
+
 
 
         //2.How many total words did each interlocutor say?
-        int[] person = new int[2];
-        person[0]=0;
-        person[1]=0;
+        i=0;
+        int[] person1 = new int[2];
+        person1[0]=0;
+        person1[1]=0;
         do
         {
             if(text.get(i).contains("A:"))
             {
-                //System.out.println(text.get(i));
-//                for (String retval: text.get(i).split(" ")){
-//                    System.out.println(retval);
-//                }
+
 
                 String[] parts = new String[2];
                 String[] dialogue = new String[2];
                 parts = text.get(i).split("A:");
-                //System.out.println(parts[1]);
                 dialogue = parts[1].split(" ");
-                //System.out.println(dialogue.length);
-                person[0] += (dialogue.length-1);
+                person1[0] += (dialogue.length-1);
             }
             if(text.get(i).contains("B:"))
             {
-                //System.out.println(text.get(i));
-//                for (String retval: text.get(i).split(" ")){
-//                    System.out.println(retval);
-//                }
-
                 String[] parts = new String[2];
                 String[] dialogue = new String[2];
                 parts = text.get(i).split("B:");
-                //System.out.println(parts[1]);
                 dialogue = parts[1].split(" ");
-                //System.out.println(dialogue.length);
-                person[1] += (dialogue.length-1);
+                person1[1] += (dialogue.length-1);
             }
-
-
             i++;
 
         }while(text.size()!=i);
 
-        System.out.println("Person A : "+person[0]+ "Person B : "+person[1]);
+        System.out.println("\n\nAnswer 2 \nPerson A : "+person1[0]+ "\nPerson B : "+person1[1]);
 
+
+
+        //part 3 here
 
 
     }
@@ -91,12 +104,8 @@ public class Main {
     {
         int i=0;
         int k=0;
-        do
-        {
 
-            System.out.println(text.get(i));
-            i++;
+        System.out.println(text.size());
 
-        }while(text.size()!=i);
     }
 }
