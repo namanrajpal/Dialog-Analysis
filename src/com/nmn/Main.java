@@ -29,7 +29,7 @@ public class Main {
             line = filein.nextLine();
             text.add(line);
         }
-        
+
 
         //printing text, looping on i
         int i=0;
